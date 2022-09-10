@@ -7,7 +7,7 @@
         <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
             <a href="{% url 'burgers' %}" class="btn btn-danger m-2 p-4">Burgers</a>
             <a href="{% url 'sides' %}" class="btn btn-danger m-2 p-4">Sides</a>
-            <a href="#" class="btn btn-danger m-2 p-4">Drinks</a>
+            <a href="{% url 'drinks' %}" class="btn btn-danger m-2 p-4">Drinks</a>
         </div>
         {% include 'includes/order_list.html' %}
     </div>
