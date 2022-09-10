@@ -187,12 +187,13 @@ Site screenshots go here!
 
 ### HTML
 
-| File Name | File Path | Result | W3C | Comment |
-| ----- | ----- | ----- | ----- | -----|
+| File Name | File Path | Result | W3C | Error/Warning | Comment |
+| ----- | ----- | ----- | ----- | -----| ----- |
 | base.html | templates/base.html | PASS | [link](docs/basetest.png) |
 | index.html | home/templates/index.html | PASS | [link](docs/indextest.png) |
 | orders.html | orders/templates/orders.html | PASS | [link](docs/orderstest.png) |
 | orders_list.html | orders/templates/includes/order_list.html | PASS | [link](docs/orderlisttest.png) |
+| burgers.html | products/templates/products/burgers.html | PASS | [link](docs/burgertest.png) | [1 error](docs/burgererror.png) | Fixed |
 
 [Back to top](#table-of-contents)
 

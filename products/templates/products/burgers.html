@@ -7,7 +7,7 @@
         <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
             <h2>Select Burger</h2>
             {% for burger in burgers %}
-            <img class="m-5" src="{{ burger.image }}">
+            <img class="m-5" src="{{ burger.image }}" alt="burger">
             <div class="justify-content-center">
                 <h4>{{ burger.name }}</h4>
                 <h4>€ {{ burger.price }}</h4>
