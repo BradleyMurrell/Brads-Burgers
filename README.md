@@ -203,12 +203,13 @@ Site screenshots go here!
 
 | Issue | Comment |
 | ----- | ----- |
+| [#55](https://github.com/BradleyMurrell/brads-burgers/issues/55)  | File "/workspace/brads-burgers/brads_burgers/settings.py", line 67, in 'DIRS': [TEMPLATES_DIRS], NameError: name 'TEMPLATES_DIRS' is not defined |
 
 ## Fixed Bugs
 
-| Commit | File Name | Line | Comment |
-| ----- | ----- | ----- | -----|
-| [aff9f79](https://github.com/BradleyMurrell/brads-burgers/commit/aff9f793f8096d483f3e0a0d99ba946787310745) | settings.py | 65 | changed `'DIRS': [TEMPLATES_DIRS],` to `'DIRS': [TEMPLATES_DIR],` |
+| Issue | Commit | File Name | Line | Comment |
+| ----- | ----- | ----- | ----- | ----- |
+| [#55](https://github.com/BradleyMurrell/brads-burgers/issues/55) | [aff9f79](https://github.com/BradleyMurrell/brads-burgers/commit/aff9f793f8096d483f3e0a0d99ba946787310745) | settings.py | 65 | changed `'DIRS': [TEMPLATES_DIRS],` to `'DIRS': [TEMPLATES_DIR],` |
 
 [Back to top](#table-of-contents)
 
