@@ -194,6 +194,7 @@ Site screenshots go here!
 | orders.html | orders/templates/orders.html | PASS | [link](docs/orderstest.png) |
 | orders_list.html | orders/templates/includes/order_list.html | PASS | [link](docs/orderlisttest.png) |
 | burgers.html | products/templates/products/burgers.html | PASS | [link](docs/burgertest.png) | [1 error](docs/burgererror.png) | Fixed |
+| sides.html | products/templates/products/sides.html | PASS | [link](docs/sidestest.png) |
 
 [Back to top](#table-of-contents)
 
