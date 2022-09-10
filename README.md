@@ -230,3 +230,4 @@ This project was deployed using Heroku
 <a name="content"></a>
 ## Content
 * Wireframe created on https://whimsical.com/
+* Bootstrap CDN sourced from https://bootswatch.com/minty/
