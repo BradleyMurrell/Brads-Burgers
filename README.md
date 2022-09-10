@@ -203,7 +203,7 @@ Site screenshots go here!
 
 | Commit | File Name | Line | Comment |
 | ----- | ----- | ----- | -----|
-| [aff9f79](https://github.com/BradleyMurrell/brads-burgers/commit/aff9f793f8096d483f3e0a0d99ba946787310745) | Settings.py | 65 | changed `'DIRS': [TEMPLATES_DIRS],` to `'DIRS': [TEMPLATES_DIR],` |
+| [aff9f79](https://github.com/BradleyMurrell/brads-burgers/commit/aff9f793f8096d483f3e0a0d99ba946787310745) | settings.py | 65 | changed `'DIRS': [TEMPLATES_DIRS],` to `'DIRS': [TEMPLATES_DIR],` |
 
 [Back to top](#table-of-contents)
 

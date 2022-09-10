@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
+            <a href="#" class="btn btn-danger m-2 p-4">Burgers</a>
+            <a href="#" class="btn btn-danger m-2 p-4">Sides</a>
+            <a href="#" class="btn btn-danger m-2 p-4">Drinks</a>
+        </div>
+        
+        <div class="card col-md-3 m-3 bg-light">
+            <h2>Order list</h2>
+            <ul></ul>
+            <h4>Total: € 0</h4>
+        </div>
+    </div>
+</div>
+{% endblock content %}
