@@ -190,6 +190,7 @@ Site screenshots go here!
 | File Name | File Path | Result | W3C | Comment |
 | ----- | ----- | ----- | ----- | -----|
 | base.html | templates/base.html | PASS | [link](docs/basetest.png) |
+| index.html | home/templates/index.html | PASS | [link](docs/indextest.png) |
 
 [Back to top](#table-of-contents)
 
