@@ -28,7 +28,7 @@ The idea of the ordering system is that when the customer arrives to the restaur
 
 The customer will first see the home screen which will prompt them to ***Place Order***.
 
-After ***Place Order*** has been selected, the screen will show a list of categories to choose from, ***Burger***, ***Sides*** and ***Drinks***.
+After ***Place Order*** has been selected, the screen will show a list of categories to choose from, ***Burgers***, ***Sides*** and ***Drinks***.
 
 After selecting a category, the customer will have a choice of selecting from a list of the chosen category.
 
@@ -191,10 +191,8 @@ Site screenshots go here!
 
 <a name="bugs"></a>
 ## Bugs
-* Could not get the total cost to appear correctly in the order list
+
 ## Fixed Bugs
-* script.js would not work. Line 2 was missing parenthesis
-* Could not get item name and price to display in order list. In burger.html, line 13, 14, had to change `class` to `id`
 
 [Back to top](#table-of-contents)
 
@@ -205,7 +203,7 @@ Site screenshots go here!
 This project was deployed using Heroku
 * Steps for deployment
   * Create a Heroku app
-  * Change ***DEBUG*** in ***settings.py*** to ***False***
+  * Change `DEBUG` in ***settings.py*** to `False`
   * Link the Heroku app to the repository
   * Click on deploy
 
