@@ -193,6 +193,7 @@ Site screenshots go here!
 ## Bugs
 
 ## Fixed Bugs
+* Settings.py, line 65, changed `'DIRS': [TEMPLATES_DIRS],` to `'DIRS': [TEMPLATES_DIR],`
 
 [Back to top](#table-of-contents)
 
