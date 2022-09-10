@@ -201,6 +201,9 @@ Site screenshots go here!
 <a name="bugs"></a>
 ## Bugs
 
+| Issue | Comment |
+| ----- | ----- |
+
 ## Fixed Bugs
 
 | Commit | File Name | Line | Comment |
