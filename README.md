@@ -185,6 +185,12 @@ Site screenshots go here!
 <a name="validator-testing"></a>
 ## Validator Testing
 
+### HTML
+
+| File Name | File Path | Result | W3C | Comment |
+| ----- | ----- | ----- | ----- | -----|
+| base.html | templates/base.html | PASS | [link](docs/basetest.png) |
+
 [Back to top](#table-of-contents)
 
 ------
