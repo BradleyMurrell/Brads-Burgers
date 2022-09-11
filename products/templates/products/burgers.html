@@ -9,8 +9,8 @@
             {% for burger in burgers %}
             <img class="m-5" src="{{ burger.image }}" alt="burger">
             <div class="justify-content-center">
-                <h4>{{ burger.name }}</h4>
-                <h4>€ {{ burger.price }}</h4>
+                <h4 id="burger{{burgers.id}}">{{ burger.name }}</h4>
+                <h4>€{{ burger.price }}</h4>
                 <button class="btn btn-warning m-5">Select</button>
             </div>
             {% endfor %}
