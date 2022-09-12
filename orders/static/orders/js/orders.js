@@ -1,5 +1,12 @@
-var cart = document.querySelector('#cart');
+var order = document.querySelector('#order');
 var total = document.querySelector('#total');
 
-cart.innerHTML = '<li>Beef Burger €5.99</li>';
-total.innerHTML = 'Total: €5.99';
+function addItem(id){
+    name = '#name' + id;
+    var name = document.querySelector(name).innerHTML;
+
+    price = '#price' + id;
+    var price = document.querySelector(price).innerHTML;
+
+    order.innerHTML += '<li>'+ name + ' ' + price +'</li>';
+}

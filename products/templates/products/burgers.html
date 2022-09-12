@@ -4,16 +4,20 @@
 {% block content %}
 <div class="container mb-5">
     <div class="row justify-content-center">
-        <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
+        <div class="card col-md-7 col-sm-12 p-5 m-3 text-center">
             <h2>Select Burger</h2>
-            {% for burger in burgers %}
-            <img class="m-5" src="{{ burger.image }}" alt="burger">
-            <div class="justify-content-center">
-                <h4 id="burger{{burgers.id}}">{{ burger.name }}</h4>
-                <h4>€{{ burger.price }}</h4>
-                <button class="btn btn-warning m-5">Select</button>
+            <div class="row">
+                {% for burger in burgers %}
+                <div class="col-md-6 p-3">
+                    <img class="image m-5" src="{{ burger.image }}" alt="burger">
+                    <div class="justify-content-center">
+                        <h4 id="name{{burger.id}}">{{ burger.name }}</h4>
+                        <h4 id="price{{burger.id}}">€{{ burger.price }}</h4>
+                        <button class="btn btn-warning m-5" onclick="addItem('{{ burger.id }}')">Select</button>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
         {% include 'includes/order_list.html' %}
     </div>
