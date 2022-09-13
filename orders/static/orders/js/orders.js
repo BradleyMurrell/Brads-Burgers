@@ -1,7 +1,7 @@
 var order = document.querySelector('#order');
-var total = document.querySelector('#total');
+var ordertotal = document.querySelector('#ordertotal');
 
-function addItem(id){
+function addItem(id) {
     name = '#name' + id;
     var name = document.querySelector(name).innerHTML;
 
