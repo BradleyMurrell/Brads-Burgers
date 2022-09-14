@@ -1,5 +1,5 @@
-var order = document.querySelector('#order');
-var ordertotal = document.querySelector('#ordertotal');
+var cart = document.querySelector('#cart');
+var total = document.querySelector('#ordertotal');
 
 function addItem(id) {
     name = '#name' + id;
@@ -8,5 +8,10 @@ function addItem(id) {
     price = '#price' + id;
     var price = document.querySelector(price).innerHTML;
 
-    order.innerHTML += '<li>'+ name + ' ' + price +'</li>';
+    var orders = JSON.parse(localStorage.getItem('orders'));
+    var total = localStorage.getItem('total');
+
+    total = Number(total) + Number(price);
+    ordertotal.innerHTML = 'Total: ' + total + '';
+    cart.innerHTML += '<li>'+ name + ' ' + price +'</li>';
 }

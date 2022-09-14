@@ -12,7 +12,7 @@
                     <img class="image m-5" src="{{ burger.image }}" alt="burger">
                     <div class="justify-content-center">
                         <h4 id="name{{burger.id}}">{{ burger.name }}</h4>
-                        <h4 id="price{{burger.id}}">€{{ burger.price }}</h4>
+                        <h4 id="price{{burger.id}}">{{ burger.price }}</h4>
                         <button class="btn btn-warning m-5" onclick="addItem('{{ burger.id }}')">Select</button>
                     </div>
                 </div>
@@ -28,4 +28,4 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}
