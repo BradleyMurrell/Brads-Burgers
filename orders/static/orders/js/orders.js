@@ -10,8 +10,9 @@ function addItem(id) {
 
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
+    var cartSize = orders.length;
 
-    orders = [name,price];
+    orders[cartSize] = [name,price];
     localStorage.setItem('orders', JSON.stringify(orders));
 
     total = Number(total) + Number(price);
@@ -20,3 +21,16 @@ function addItem(id) {
     ordertotal.innerHTML = 'Total: ' + total + '';
     cart.innerHTML += '<li>'+ name + ' ' + price +'</li>';
 }
+
+function shoppingCart() {
+    var orders = JSON.parse(localStorage.getItem('orders'));
+    var total = localStorage.getItem('total');
+    var cartSize = orders.length;
+    cart.innerHTML = '';
+    for (let i = 0; i < cartSize; i++) {
+        cart.innerHTML += '<li>'+ orders[i][0] + ' ' + orders[i][1] + '</li>';
+    }
+    ordertotal.innerHTML = 'Total: ' + total + '';
+}
+
+shoppingCart()
