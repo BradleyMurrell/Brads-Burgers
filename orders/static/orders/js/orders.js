@@ -11,7 +11,12 @@ function addItem(id) {
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
 
+    orders = [name,price];
+    localStorage.setItem('orders', JSON.stringify(orders));
+
     total = Number(total) + Number(price);
+    localStorage.setItem('total', total);
+
     ordertotal.innerHTML = 'Total: ' + total + '';
     cart.innerHTML += '<li>'+ name + ' ' + price +'</li>';
 }
