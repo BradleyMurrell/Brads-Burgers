@@ -18,8 +18,8 @@ function addItem(id) {
     total = Number(total) + Number(price);
     localStorage.setItem('total', total);
 
-    ordertotal.innerHTML = 'Total: ' + total + '';
-    cart.innerHTML += '<li>'+ name + ' ' + price +'</li>';
+    ordertotal.innerHTML = 'Total: €' + total;
+    cart.innerHTML += '<li>'+ name + ': €' + price +'</li>';
 }
 
 function shoppingCart() {
@@ -28,9 +28,9 @@ function shoppingCart() {
     var cartSize = orders.length;
     cart.innerHTML = '';
     for (let i = 0; i < cartSize; i++) {
-        cart.innerHTML += '<li>'+ orders[i][0] + ' ' + orders[i][1] + '</li>';
+        cart.innerHTML += '<li>'+ orders[i][0] + ': €' + orders[i][1] + '</li>';
     }
-    ordertotal.innerHTML = 'Total: ' + total + '';
+    ordertotal.innerHTML = 'Total: €' + total;
 }
 
 shoppingCart()
