@@ -4,24 +4,28 @@
 {% block content %}
 <div class="container mb-5">
     <div class="row justify-content-center">
-        <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
+        <div class="card col-md-7 col-sm-12 p-5 m-3 text-center">
             <h2>Select Side</h2>
-            {% for side in sides %}
-            <img class="m-5" src="{{ side.image }}" alt="side">
-            <div class="justify-content-center">
-                <h4>{{ side.name }}</h4>
-                <h4>€ {{ side.price }}</h4>
-                <button class="btn btn-warning m-5">Select</button>
+            <div class="row">
+                {% for side in sides %}
+                <div class="col-md-6 p-3">
+                    <img class="image m-5" src="{{ side.image }}" alt="side">
+                    <div class="justify-content-center">
+                        <h4 id="name{{side.id}}">{{ side.name }}</h4>
+                        <h4 id="price{{side.id}}">{{ side.price }}</h4>
+                        <button class="btn btn-warning m-5" onclick="addItem('{{ side.id }}')">Select</button>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
         {% include 'includes/order_list.html' %}
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8 col-sm-12 p-5 m-3 text-center">
-            <a href="{% url 'orders' %}" class="btn btn-secondary col-sm-12 col-md-5  m-2 p-4">Back</a>
-            <a href="{% url 'orders' %}" class="btn btn-secondary col-sm-12 col-md-5 m-2 p-4">Next</a>
+            <a href="{% url 'burgers' %}" class="btn btn-secondary col-sm-12 col-md-5  m-2 p-4">Back</a>
+            <a href="{% url 'drinks' %}" class="btn btn-secondary col-sm-12 col-md-5 m-2 p-4">Next</a>
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}
