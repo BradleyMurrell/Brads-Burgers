@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from .models import Burger, Side, Drink
 from .forms import ProductForm
@@ -20,7 +20,15 @@ def drinks(request):
 
 
 def add_product(request):
-    form = ProductForm()
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('add_product'))
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,
