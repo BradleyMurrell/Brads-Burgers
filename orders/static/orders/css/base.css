@@ -30,7 +30,7 @@ li {
 }
 
 @media (max-width: 576px) {
-    #heading{
+    #heading {
         height: 5rem;
     }
 }

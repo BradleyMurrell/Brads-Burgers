@@ -4,12 +4,28 @@
 {% block content %}
 <div class="container mb-5">
     <div class="row justify-content-center">
-        {% include 'includes/order_list.html' %}
+        <div class="col-md-5">
+            <div class="card p-4 m-3 bg-light">
+                <h2 class="text-center">Your Order</h2>
+                <div class="row">
+                    <div class="col-md-6 text-left" id="item">
+                        <h4>Item</h4>
+                    </div>
+                    <div class="col-md-6 text-right" id="subtotal">
+                        <h4>Subtotal</h4>
+                    </div>
+                </div>
+                <hr>
+                <h3 class="text-center" id="grandtotal">Total: </h3>
+            </div>
+        </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8 col-sm-12 p-5 m-3 text-center">
-            <a href="{% url 'home' %}" class="btn btn-info col-sm-12 col-md-5 m-2 p-4">Next Customer</a>
+            <a href="{% url 'orders' %}" class="btn btn-info col-sm-12 col-md-5 m-2 p-4">Back</a>
+            <a href="{% url 'home' %}" class="btn btn-info col-sm-12 col-md-5 m-2 p-4">Confirm Order</a>
         </div>
     </div>
 </div>
+<script src="{% static 'orders/js/cart.js' %}"></script>
 {% endblock %}
