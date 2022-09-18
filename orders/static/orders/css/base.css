@@ -1,3 +1,26 @@
 .image {
     height: 7rem;
 }
+
+.del {
+    position: absolute;
+    left: 50px;
+    border: solid 1px;
+    border-color: #FFCE67;
+    background-color: rgb(255, 206, 103, 0.3);
+    color: #FFCE67;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.del:hover {
+    background-color: rgb(255, 206, 103, 0.1);
+}
+
+li {
+    list-style-type: none;
+}

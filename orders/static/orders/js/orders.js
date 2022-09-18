@@ -18,7 +18,7 @@ function addItem(id) {
     total = Number(total) + Number(price);
     localStorage.setItem('total', total);
 
-    remove = '<button class="del" onclick="removeItem(' + cartSize + ')">x</button>';
+    remove = '<div class="del" onclick="removeItem(' + cartSize + ')">-</div>';
     ordertotal.innerHTML = 'Total: €' + total;
     cart.innerHTML += '<li>'+ remove + name + ': €' + price + '</li>';
 }
@@ -29,7 +29,7 @@ function shoppingCart() {
     var cartSize = orders.length;
     cart.innerHTML = '';
     for (let i = 0; i < cartSize; i++) {
-        remove = '<button class="del" onclick="removeItem(' + i + ')">x</button>';
+        remove = '<div class="del" onclick="removeItem(' + i + ')">-</div>';
         cart.innerHTML += '<li>'+ remove + orders[i][0] + ': €' + orders[i][1] + '</li>';
     }
     ordertotal.innerHTML = 'Total: €' + total;
