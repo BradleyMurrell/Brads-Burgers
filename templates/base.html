@@ -30,6 +30,7 @@
         <div class="text-center p-4">
             {% if user.is_authenticated %}
                 {% if request.user.is_superuser %}
+                    <a href="{% url 'dashboard' %}" class="m-3 text-dark">Dashboard</a>
                     <a href="{% url 'add_product' %}" class="m-3 text-dark">Product Management</a>
                 {% endif %}
                 <a href="{% url 'account_logout' %}" class="m-3 text-dark">Logout</a>
