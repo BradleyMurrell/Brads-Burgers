@@ -16,14 +16,16 @@
       <p>{% blocktrans %}If you have not created an account yet, then please
         <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
-      <form class="login" method="POST" action="{% url 'account_login' %}">
+      <form class="login text-left" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a href="{% url 'home' %}" class="btn btn-primary p-2">Cancel</a>
-        <button class="btn btn-primary p-2" type="submit">{% trans "Sign In" %}</button>
+        <div class="text-center">
+          <a href="{% url 'home' %}" class="btn btn-primary p-2">Cancel</a>
+          <button class="btn btn-primary p-2" type="submit">{% trans "Sign In" %}</button>
+        </div>
       </form>
     </div>
   </div>
