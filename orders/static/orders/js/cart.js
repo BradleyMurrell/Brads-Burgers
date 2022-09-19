@@ -18,3 +18,21 @@ function fshoppingCart() {
 }
 
 fshoppingCart()
+
+function confirmation() {
+    var orders = localStorage.getItem('orders');
+
+    var ur = '/confirmation/';
+    var orderData = {};
+    orderData['orders'] = orders;
+    $.ajax({
+        url: ur,
+        type: "POST",
+        data: orderData,
+        success: function(data){
+            window.location.replace('/confirmation/complete')
+            localStorage.setItem('orders', JSON.stringify([]));
+            localStorage.setItem('total', 0);
+        }
+    })
+}
