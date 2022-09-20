@@ -196,6 +196,10 @@ Site screenshots go here!
 | burgers.html | products/templates/products/burgers.html | PASS | [link](docs/burgertest.png) | [1 error](docs/burgererror.png) | Fixed |
 | sides.html | products/templates/products/sides.html | PASS | [link](docs/sidestest.png) |
 | drinks.html | products/templates/products/drinks.html | PASS | [link](docs/drinkstest.png) |
+| add_product.html | products/templates/products/add_product.html |  | [link]() |
+| confirmation.html | confirmation/templates/confirmation/confirmation.html |  | [link]() |
+| complete.html | confirmation/templates/confirmation/complete.html |  | [link]() |
+| dashboard.html | dashboard/templates/dashboard/dashboard.html |  | [link]() |
 
 ### CSS
 
@@ -208,6 +212,8 @@ Site screenshots go here!
 | File Name | File Path | Result | W3C | Error/Warning | Comment |
 | ----- | ----- | ----- | ----- | -----| ----- |
 | main.js | orders/main.js | PASS | [link](docs/mainjstest.png) |
+| cart.js | orders/cart.js |  | [link]() |
+| orders.js | orders/orders.js |  | [link]() |
 
 [Back to top](#table-of-contents)
 
