@@ -243,3 +243,5 @@ This project was deployed using Heroku
 ## Content
 * Wireframe created on https://whimsical.com/
 * Bootstrap CDN sourced from https://bootswatch.com/minty/
+* Images sourced from https://pixabay.com/
+* ***BRADS BURGERS*** heading image created on https://www.graffiti-empire.com/
