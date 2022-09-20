@@ -203,6 +203,12 @@ Site screenshots go here!
 | ----- | ----- | ----- | ----- | -----| ----- |
 | base.css | orders/base.css | PASS | [link](docs/csstest.png) |
 
+### JS
+
+| File Name | File Path | Result | W3C | Error/Warning | Comment |
+| ----- | ----- | ----- | ----- | -----| ----- |
+| main.js | orders/main.js | PASS | [link](docs/mainjstest.png) |
+
 [Back to top](#table-of-contents)
 
 ------
