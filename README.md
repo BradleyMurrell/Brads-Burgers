@@ -203,14 +203,14 @@ Site screenshots go here!
 
 ### CSS
 
-| File Name | File Path | Result | W3C | Error/Warning | Comment |
+| File Name | File Path | Result | W3C CSS | Error/Warning | Comment |
 | ----- | ----- | ----- | ----- | -----| ----- |
 | base.css | orders/base.css | PASS | [link](docs/csstest.png) |
 
 ### JS
 
-| File Name | File Path | Result | W3C | Error/Warning | Comment |
-| ----- | ----- | ----- | ----- | -----| ----- |
+| File Name | File Path | Result | JSHint | Comment |
+| ----- | ----- | ----- | ----- | ----- |
 | main.js | orders/main.js | PASS | [link](docs/mainjstest.png) |
 | cart.js | orders/cart.js |  | [link]() |
 | orders.js | orders/orders.js |  | [link]() |
