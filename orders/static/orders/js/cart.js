@@ -30,9 +30,7 @@ function confirmation() {
         type: "POST",
         data: orderData,
         success: function(data){
-            window.location.replace('/confirmation/complete')
-            localStorage.setItem('orders', JSON.stringify([]));
-            localStorage.setItem('total', 0);
+            window.location.replace('/confirmation/success')
         }
     })
 }
