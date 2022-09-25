@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mb-5">
+    <h1 class="text-center">Product Management</h1>
+    <div class="row justify-content-center">
+        <div class="card col-md-5 col-sm-12 p-5 m-3 text-center">
+            <h3>Add Product</h3>
+            <a href="{% url 'add_burger' %}" class="btn btn-danger m-2 p-4">Add Burger</a>
+            <a href="{% url 'add_side' %}" class="btn btn-danger m-2 p-4">Add Side</a>
+            <a href="{% url 'add_drink' %}" class="btn btn-danger m-2 p-4">Add Drink</a>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 p-5 m-3 text-center">
+            <a href="{% url 'home' %}" class="btn btn-info col-sm-12 col-md-5 m-2 p-4">Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

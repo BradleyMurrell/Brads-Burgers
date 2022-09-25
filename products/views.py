@@ -22,13 +22,17 @@ def drinks(request):
     return render(request, 'products/drinks.html', ctx)
 
 
+def product_management(request):
+    return render(request, 'products/product_management.html')
+
+
 def add_burger(request):
     submitted = False
     if request.method == 'POST':
         form = BurgerForm(request.POST)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect('/add_burger?submitted=True')
+        return HttpResponseRedirect('product_management')
     else:
         form = BurgerForm
         if 'submitted' in request.GET:
@@ -43,7 +47,7 @@ def add_side(request):
         form = SideForm(request.POST)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect('/add_side?submitted=True')
+        return HttpResponseRedirect('product_management')
     else:
         form = SideForm
         if 'submitted' in request.GET:
@@ -58,7 +62,7 @@ def add_drink(request):
         form = DrinkForm(request.POST)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect('/add_drink?submitted=True')
+        return HttpResponseRedirect('product_management')
     else:
         form = DrinkForm
         if 'submitted' in request.GET:
