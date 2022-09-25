@@ -20,10 +20,11 @@ def confirmation(request):
         request.session['total'] = request.POST.get('total')
         order = Order(number=randomOrderNumber(3), name=order, total=float(request.session['total']))
         order.save()
+        request.session['orderNum'] = order.number
     return render(request, 'confirmation/confirmation.html')
 
 
 def success(request):
-    order = request.session['orders']
-    ctx = {'order': order}
+    orderNum = request.session['orderNum']
+    ctx = {'orderNum': orderNum}
     return render(request, 'confirmation/success.html', ctx)
