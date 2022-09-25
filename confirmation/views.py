@@ -18,9 +18,8 @@ def confirmation(request):
         request.session['orders'] = request.POST.get('orders')
         order = json.loads(request.session['orders'])
         request.session['total'] = request.POST.get('total')
-        if request.user.is_authenticated:
-            order = Order(number=randomOrderNumber(3), name=order, total=float(request.session['total']))
-            order.save()
+        order = Order(number=randomOrderNumber(3), name=order, total=float(request.session['total']))
+        order.save()
     return render(request, 'confirmation/confirmation.html')
 
 
