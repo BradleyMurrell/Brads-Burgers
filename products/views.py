@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from .models import Burger, Side, Drink
-from .forms import ProductForm
+from .forms import BurgerForm, SideForm, DrinkForm
 
 
 def burgers(request):
@@ -21,18 +22,46 @@ def drinks(request):
     return render(request, 'products/drinks.html', ctx)
 
 
-def add_product(request):
+def add_burger(request):
+    submitted = False
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = BurgerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('add_product'))
+        return HttpResponseRedirect('/add_burger?submitted=True')
     else:
-        form = ProductForm()
+        form = BurgerForm
+        if 'submitted' in request.GET:
+            submitted = True
+        ctx = {'form': form, 'submitted': submitted}
+        return render(request, 'products/add_burger.html', ctx)
 
-    template = 'products/add_product.html'
-    context = {
-        'form': form,
-    }
 
-    return render(request, template, context)
+def add_side(request):
+    submitted = False
+    if request.method == 'POST':
+        form = SideForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return HttpResponseRedirect('/add_side?submitted=True')
+    else:
+        form = SideForm
+        if 'submitted' in request.GET:
+            submitted = True
+        ctx = {'form': form, 'submitted': submitted}
+        return render(request, 'products/add_side.html', ctx)
+
+
+def add_drink(request):
+    submitted = False
+    if request.method == 'POST':
+        form = DrinkForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return HttpResponseRedirect('/add_drink?submitted=True')
+    else:
+        form = DrinkForm
+        if 'submitted' in request.GET:
+            submitted = True
+        ctx = {'form': form, 'submitted': submitted}
+        return render(request, 'products/add_drink.html', ctx)

@@ -1,12 +1,38 @@
 from django import forms
-from .models import Burger
+from .models import Burger, Side, Drink
 
 
-class ProductForm(forms.ModelForm):
-
+class BurgerForm(forms.ModelForm):
     class Meta:
         model = Burger
-        fields = '__all__'
+        fields = ('name', 'price', 'image')
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'price': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.TextInput(attrs={'class': 'form-control'})
+        }
+
+
+class SideForm(forms.ModelForm):
+    class Meta:
+        model = Side
+        fields = ('name', 'price', 'image')
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'price': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.TextInput(attrs={'class': 'form-control'})
+        }
+
+
+class DrinkForm(forms.ModelForm):
+    class Meta:
+        model = Drink
+        fields = ('name', 'price', 'image')
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'price': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.TextInput(attrs={'class': 'form-control'})
+        }
