@@ -1,15 +1,10 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
-
-
-class OrderLineItemAdminInline(admin.TabularInline):
-    model = OrderLineItem
+from .models import Order
 
 
 class OrderAdmin(admin.ModelAdmin):
-    inlines = (OrderLineItemAdminInline,)
 
-    list_display = ('order_number', 'date', 'order_total')
+    list_display = ('number', 'total', 'date',)
 
     ordering = ('-date',)
 

@@ -21,10 +21,12 @@ fshoppingCart()
 
 function confirmation() {
     var orders = localStorage.getItem('orders');
+    var total = localStorage.getItem('total');
 
     var ur = '/confirmation/';
     var orderData = {};
     orderData['orders'] = orders;
+    orderData['total'] = total;
     $.ajax({
         url: ur,
         type: "POST",
