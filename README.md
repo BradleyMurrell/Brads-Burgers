@@ -124,9 +124,10 @@ When the order is complete, the restaurant can mark the order as complete.
 
 | Name | Key | Type | Other Details |
 | ---- | ---- | ---- | ----|
-| order_number | | CharField | max_length=50 |
-| time_date | | DateTimeField | auto_now_add=True |
-| order_total | | DecimalField | max_length=10, decimal_places=2, default=0 |
+| number | | CharField | max_length=3 |
+| name | | CharField | max_length=100 |
+| total | | DecimalField | max_length=10, decimal_places=2, default=0 |
+| date | | DateTimeField | auto_now_add=True |
 
 [Back to top](#table-of-contents)
 
@@ -140,8 +141,11 @@ When the order is complete, the restaurant can mark the order as complete.
 * Customer can view what they have ordered with the price of each item and a total price before finishing their order
 * Customer can remove item from order list
 * Customer will be given an order number after finishing their order
-* Restaurant can view what orders have been made along side the order number
-* Restaurant can mark which orders have been completed
+
+### Features that I did not get time to add
+* Restaurant can view what orders have been made along side the order number in a dashboard
+* Restaurant can mark which orders have been completed in the dashboard
+* Restaurant can edit and remove items in product management
 
 ### Future Features
 * Customer can make a payment with debit/credit card after completing order
@@ -149,12 +153,6 @@ When the order is complete, the restaurant can mark the order as complete.
 * Customer can have the option for home delivery
 * Restaurant can show what items are out of stock
 * Customer can customize their burger by selecting what they want on it from a number of sub-categories
-
-[Back to top](#table-of-contents)
-
-------
-
-Site screenshots go here!
 
 [Back to top](#table-of-contents)
 
@@ -189,17 +187,20 @@ Site screenshots go here!
 
 | File Name | File Path | Result | W3C | Error/Warning | Comment |
 | ----- | ----- | ----- | ----- | -----| ----- |
-| base.html | templates/base.html | PASS | [link](docs/basetest.png) |
-| index.html | home/templates/index.html | PASS | [link](docs/indextest.png) |
-| orders.html | orders/templates/orders.html | PASS | [link](docs/orderstest.png) |
-| orders_list.html | orders/templates/includes/order_list.html | PASS | [link](docs/orderlisttest.png) |
-| burgers.html | products/templates/products/burgers.html | PASS | [link](docs/burgertest.png) | [1 error](docs/burgererror.png) | Fixed |
-| sides.html | products/templates/products/sides.html | PASS | [link](docs/sidestest.png) |
-| drinks.html | products/templates/products/drinks.html | PASS | [link](docs/drinkstest.png) |
-| add_product.html | products/templates/products/add_product.html |  | [link]() |
-| confirmation.html | confirmation/templates/confirmation/confirmation.html |  | [link]() |
-| complete.html | confirmation/templates/confirmation/complete.html |  | [link]() |
-| dashboard.html | dashboard/templates/dashboard/dashboard.html |  | [link]() |
+| base.html | /base.html | PASS | [link](docs/basetest.png) |
+| index.html | home/index.html | PASS | [link](docs/indextest.png) |
+| orders.html | orders/orders.html | PASS | [link](docs/orderstest.png) |
+| orders_list.html | includes/order_list.html | PASS | [link](docs/orderlisttest.png) |
+| burgers.html | products/burgers.html | PASS | [link](docs/burgertest.png) | [1 error](docs/burgererror.png) | Fixed |
+| sides.html | products/sides.html | PASS | [link](docs/sidestest.png) |
+| drinks.html | products/drinks.html | PASS | [link](docs/drinkstest.png) |
+| product_management.html | products/product_management.html |  |  |
+| add_burger.html | products/add_burger.html |  |  |
+| add_side.html | products/add_side.html |  |  |
+| add_drink.html | products/add_drink.html |  |  |
+| confirmation.html | confirmation/confirmation.html |  |  |
+| success.html | confirmation/success.html |  |  |
+| dashboard.html | dashboard/dashboard.html |  |  |
 
 ### CSS
 
@@ -212,8 +213,8 @@ Site screenshots go here!
 | File Name | File Path | Result | JSHint | Comment |
 | ----- | ----- | ----- | ----- | ----- |
 | main.js | orders/main.js | PASS | [link](docs/mainjstest.png) |
-| cart.js | orders/cart.js |  | [link]() |
-| orders.js | orders/orders.js |  | [link]() |
+| cart.js | orders/cart.js |  | [link](docs/cartjstest.png) |
+| orders.js | orders/orders.js |  | [link](docs/orderjstest.png) |
 
 [Back to top](#table-of-contents)
 
@@ -244,6 +245,8 @@ This project was deployed using Heroku
   * Change `DEBUG` in ***settings.py*** to `False`
   * Link the Heroku app to the repository
   * Click on deploy
+
+Link to deployed site https://brads-burgers.herokuapp.com/
 
 [Back to top](#table-of-contents)
 
